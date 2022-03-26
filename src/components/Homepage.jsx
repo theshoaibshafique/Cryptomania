@@ -14,6 +14,7 @@ const Homepage = () => {
   const globalStats = data?.data?.stats;
 
   if (isFetching) return <Loader />;
+
   return (
     <>
       <Title level={2} className="heading">
@@ -24,7 +25,7 @@ const Homepage = () => {
         <Col span={12}>
           <Statistic
             title="Total Crypto Currencies"
-            value={globalStats.total}
+            value={globalStats?.total}
           />
         </Col>
         <Col span={12}>
